@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>تماس با ما | اکونوریس — درخواست مشاوره رایگان</title>
+  <meta name="description" content="درخواست مشاوره رایگان از متخصصین اکونوریس؛ آدرس، شماره تماس و مسیریابی دفتر شتاب‌دهنده در مشهد.">
+  <link rel="canonical" href="./contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="اکونوریس">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:title" content="تماس با اکونوریس | درخواست مشاوره رایگان">
+  <meta property="og:description" content="فرم درخواست مشاوره، شماره تماس و آدرس شتاب‌دهنده اکونوریس در مشهد.">
+  <meta property="og:image" content="assets/img/og-cover.svg">
+  <meta name="theme-color" content="#070B1F">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <style>#econoris-preloader{position:fixed;inset:0;z-index:100;background:#070B1F}</style>
+  <script>try{if(sessionStorage.getItem('econoris-visited')==='1'){document.documentElement.classList.add('pt-cover')}}catch(e){}</script>
+  <noscript><style>#econoris-preloader,#econoris-transition{display:none!important}</style></noscript>
+</head>
+<body data-page="contact" class="font-vazir bg-night text-white antialiased">
+
+  <div id="econoris-preloader" role="status" aria-label="در حال بارگذاری سایت"></div>
+  <div id="econoris-header"></div>
+
+  <main id="main">
+
+    <!-- ═══ هیرو ═══ -->
+    <section class="hero hero-sm aurora grain" aria-label="تماس با ما">
+      <canvas id="contact-canvas" class="page-canvas" aria-hidden="true"></canvas>
+      <div class="hex-deco hd-3" aria-hidden="true"></div>
+      <div class="hcontainer relative z-10 flex flex-col items-center justify-center text-center">
+        <nav class="breadcrumb" aria-label="مسیر صفحه">
+          <a href="index.html">صفحه اصلی</a><span class="sep">/</span><span aria-current="page">تماس با ما</span>
+        </nav>
+        <span class="eyebrow" data-reveal><span class="pulse-dot" aria-hidden="true"></span>ارتباط با ما</span>
+        <h1 class="mt-5 font-black leading-[1.3]" style="font-size:clamp(1.9rem,5vw,3.2rem)" data-reveal data-delay="80">تماس با ما</h1>
+        <p class="mt-5 max-w-2xl text-sm leading-8 text-lav sm:text-base" data-reveal data-delay="160">
+          اکونوریس، شتاب‌دهنده‌ای نوآور در حوزه نوآوری‌های دارویی و زیست‌فناوری؛
+          برای دریافت مشاوره یا همکاری با ما، از راه‌های زیر در ارتباط باشید.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ فرم مشاوره + کارت‌های اطلاعات ═══ -->
+    <section class="sec-sec sec-light dots-light relative" aria-label="درخواست مشاوره رایگان">
+      <div class="blob blob-b" aria-hidden="true"></div>
+
+      <!-- لایه سیگنال: خطوط اتصال همگرا به فرم -->
+      <svg class="sig-layer" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <path d="M-40 120 C 300 180, 520 300, 590 400" stroke="#2F6BFF" opacity=".5"/>
+        <path d="M1240 90 C 900 150, 700 300, 620 400" stroke="#7C4DFF" opacity=".5"/>
+        <path d="M-40 700 C 320 660, 520 540, 588 430" stroke="#00D4C2" opacity=".5"/>
+        <path d="M1240 720 C 880 680, 700 540, 625 430" stroke="#FF4FA3" opacity=".4"/>
+        <path d="M600 -40 C 590 160, 600 260, 605 380" stroke="#FFB938" opacity=".35"/>
+        <g fill="#2F6BFF"><circle class="sig-node" cx="-40" cy="120" r="5"/><circle class="sig-node" cx="1240" cy="90" r="5"/></g>
+        <g fill="#7C4DFF"><circle class="sig-node" cx="-40" cy="700" r="5"/><circle class="sig-node" cx="1240" cy="720" r="5"/></g>
+        <g fill="#00D4C2"><circle class="sig-node" cx="600" cy="-40" r="5"/><circle class="sig-node" cx="605" cy="390" r="7"/></g>
+      </svg>
+
+      <div class="hcontainer relative">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="eyebrow eyebrow-dark" data-reveal>مشاوره رایگان</span>
+          <h2 class="h2 h2-dark mt-4" data-reveal data-delay="80">درخواست مشاوره رایگان</h2>
+          <p class="sub sub-dark mt-4" data-reveal data-delay="160">درخواست خود را در فرم زیر ثبت نمایید تا کارشناسان ما با شما تماس بگیرند.</p>
+        </div>
+
+        <div class="c-grid mt-12">
+          <!-- فرم -->
+          <div class="fs-wrap" data-reveal>
+            <form id="consult-form" class="c-form-card" novalidate>
+              <!-- honeypot ضد اسپم -->
+              <div class="hp-field" aria-hidden="true">
+                <label for="hp-web">وبسایت</label>
+                <input id="hp-web" name="website" type="text" tabindex="-1" autocomplete="off">
+              </div>
+
+              <fieldset class="chips">
+                <legend>موضوع درخواست (اختیاری — چندگزینه‌ای)</legend>
+                <div class="chips-row">
+                  <button type="button" class="chip-btn" aria-pressed="false" data-chip="مشاوره ثبت دارو">مشاوره ثبت دارو</button>
+                  <button type="button" class="chip-btn" aria-pressed="false" data-chip="راه‌اندازی استارتاپ">راه‌اندازی استارتاپ</button>
+                  <button type="button" class="chip-btn" aria-pressed="false" data-chip="فضای اشتراکی">فضای اشتراکی</button>
+                  <button type="button" class="chip-btn" aria-pressed="false" data-chip="خدمات آزمایشگاهی">خدمات آزمایشگاهی</button>
+                </div>
+              </fieldset>
+
+              <div class="field">
+                <input id="f-name" name="name" type="text" placeholder=" " autocomplete="name" required>
+                <label for="f-name">نام و نام خانوادگی *</label>
+                <span class="err" id="e-name" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <input id="f-phone" name="phone" type="tel" placeholder=" " inputmode="tel" autocomplete="tel" required dir="ltr" style="text-align:start">
+                <label for="f-phone" style="inset-inline-start:1.1rem">شماره موبایل *</label>
+                <span class="err" id="e-phone" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <input id="f-email" name="email" type="email" placeholder=" " autocomplete="email" dir="ltr" style="text-align:start">
+                <label for="f-email" style="inset-inline-start:1.1rem">ایمیل (اختیاری)</label>
+                <span class="err" id="e-email" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <textarea id="f-msg" name="message" placeholder=" " required></textarea>
+                <label for="f-msg">پیام شما *</label>
+                <span class="err" id="e-msg" role="alert"></span>
+              </div>
+
+              <button type="submit" id="f-submit" class="btn btn-gradient w-full justify-center mt-2">
+                ثبت درخواست مشاوره
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+              </button>
+              <p class="mt-3 text-center text-xs" style="color:rgba(12,18,51,.5)">با ثبت درخواست، کارشناسان ما در اسرع وقت با شما تماس می‌گیرند.</p>
+            </form>
+
+            <!-- پنل موفقیت -->
+            <div id="form-success" class="form-success" hidden>
+              <svg class="fs-check" viewBox="0 0 90 90" aria-hidden="true">
+                <circle id="fs-circle" cx="45" cy="45" r="40"/>
+                <path id="fs-tick" d="M29 46l11 11 21-24"/>
+              </svg>
+              <h3 class="text-xl font-black">درخواست شما ثبت شد!</h3>
+              <p>کارشناسان اکونوریس به‌زودی با شما تماس می‌گیرند.<br>از اعتماد شما سپاسگزاریم.</p>
+              <button type="button" id="fs-again" class="btn btn-dark btn-sm mt-5">ثبت درخواست جدید</button>
+            </div>
+          </div>
+
+          <!-- کارت‌های اطلاعات -->
+          <div class="flex flex-col gap-4" data-reveal data-delay="120">
+            <div class="info-card">
+              <span class="ic-bubble" style="background:linear-gradient(135deg,#2F6BFF,#7C4DFF)">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:24px;height:24px"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div class="flex-1">
+                <h3>آدرس دفتر</h3>
+                <p>خراسان رضوی - مشهد - بلوار ملک‌الشعرا بهار - چهارراه بی‌سیم - بین جهاد ۴ و ۶ - ساختمان بیوتکنولوژی - طبقه ۴</p>
+              </div>
+              <button class="copy-btn" data-copy="address" data-msg="آدرس کپی شد" aria-label="کپی آدرس">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:16px;height:16px"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+              </button>
+            </div>
+
+            <div class="info-card">
+              <span class="ic-bubble" style="background:linear-gradient(135deg,#00D4C2,#B6F23A)">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:24px;height:24px"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2.2z"/></svg>
+              </span>
+              <div class="flex-1">
+                <h3>تماس مستقیم</h3>
+                <p><a href="tel:+989192639746" class="font-black" style="color:var(--ink);text-decoration:none" dir="ltr">۰۹۱۹-۲۶۳-۹۷۴۶</a><br>شنبه تا پنجشنبه، در ساعات اداری</p>
+              </div>
+              <button class="copy-btn" data-copy="phone" data-msg="شماره تماس کپی شد" aria-label="کپی شماره تماس">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:16px;height:16px"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+              </button>
+            </div>
+
+            <div class="info-card">
+              <span class="ic-bubble" style="background:linear-gradient(135deg,#FF4FA3,#FF6B6B)">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:24px;height:24px"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4z"/></svg>
+              </span>
+              <div class="flex-1">
+                <h3>مسیریابی</h3>
+                <p>موقعیت دفتر اکونوریس را روی نقشه ببینید و مسیر رسیدن را برنامه‌ریزی کنید.</p>
+              </div>
+              <a href="https://maps.app.goo.gl/KPK78XQ3PnSSHeqZ6" target="_blank" rel="noopener" class="btn btn-dark btn-sm" style="flex-shrink:0">مسیریابی با بلد</a>
+            </div>
+
+            <div class="info-card">
+              <span class="ic-bubble" style="background:linear-gradient(135deg,#FFB938,#FF8A3C)">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:24px;height:24px"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              </span>
+              <div class="flex-1">
+                <h3>سریع‌ترین راه</h3>
+                <p>اگر عجله دارید، همین حالا تماس بگیرید؛ مشاوره اولیه تلفنی رایگان است.</p>
+              </div>
+              <a href="tel:+989192639746" class="btn btn-gradient btn-sm" style="flex-shrink:0">تماس</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ نقشه ═══ -->
+    <section class="sec-sec sec-mint" aria-label="نقشه موقعیت">
+      <div class="hcontainer">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="eyebrow eyebrow-dark" data-reveal>موقعیت ما</span>
+          <h2 class="h2 h2-dark mt-4" data-reveal data-delay="80">ما کجا هستیم؟</h2>
+        </div>
+        <div class="map-card mt-10" data-reveal="scale">
+          <svg class="map-svg" viewBox="0 0 900 380" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <radialGradient id="mpg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#2F6BFF" stop-opacity=".25"/><stop offset="1" stop-color="#2F6BFF" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="900" height="380" fill="#0C1233"/>
+            <circle cx="450" cy="190" r="220" fill="url(#mpg)"/>
+            <g fill="none" stroke="rgba(199,208,245,.16)" stroke-width="2">
+              <path class="map-road" d="M-20 90 H920"/><path class="map-road" d="M-20 190 H920"/><path class="map-road" d="M-20 300 H920"/>
+              <path class="map-road" d="M160 -20 V400"/><path class="map-road" d="M450 -20 V400"/><path class="map-road" d="M740 -20 V400"/>
+            </g>
+            <g fill="none" stroke="rgba(199,208,245,.08)" stroke-width="1.4">
+              <path d="M-20 140 H920"/><path d="M-20 250 H920"/><path d="M305 -20 V400"/><path d="M595 -20 V400"/>
+            </g>
+            <g fill="rgba(199,208,245,.1)">
+              <rect x="190" y="110" width="90" height="56" rx="6"/><rect x="480" y="215" width="100" height="60" rx="6"/>
+              <rect x="640" y="105" width="70" height="66" rx="6"/><rect x="80" y="215" width="60" height="56" rx="6"/>
+              <rect x="200" y="270" width="76" height="44" rx="6"/><rect x="500" y="100" width="64" height="50" rx="6"/>
+            </g>
+            <path d="M-20 300 H450 V190" fill="none" stroke="#00D4C2" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 8" opacity=".8"/>
+            <g>
+              <circle class="pin-ring" cx="450" cy="160" r="26" fill="none" stroke="#00D4C2" stroke-width="2"/>
+              <path d="M450 118c-13 0-23 10-23 23 0 16 23 37 23 37s23-21 23-37c0-13-10-23-23-23z" fill="#00D4C2"/>
+              <circle cx="450" cy="141" r="8" fill="#070B1F"/>
+            </g>
+            <text x="450" y="105" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">اکونوریس — ساختمان بیوتکنولوژی</text>
+          </svg>
+          <button id="load-map" class="btn btn-gradient map-cta">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:16px;height:16px"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            نمایش نقشه
+          </button>
+          <div id="map-embed" class="map-embed" hidden></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="econoris-footer"></div>
+  <div id="econoris-drawer"></div>
+  <div id="econoris-search"></div>
+  <div id="econoris-transition" aria-hidden="true"></div>
+  <div id="econoris-mobilebar"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/preloader.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/three-hero.js"></script>
+  <script src="assets/js/page-contact.js"></script>
+</body>
+</html>

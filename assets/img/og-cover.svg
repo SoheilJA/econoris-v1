@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="og1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2F6BFF"/><stop offset=".55" stop-color="#7C4DFF"/><stop offset="1" stop-color="#00D4C2"/>
+    </linearGradient>
+    <radialGradient id="ogb1" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#2F6BFF" stop-opacity=".35"/><stop offset="1" stop-color="#2F6BFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ogb2" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#00D4C2" stop-opacity=".22"/><stop offset="1" stop-color="#00D4C2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ogb3" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#FF4FA3" stop-opacity=".2"/><stop offset="1" stop-color="#FF4FA3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#070B1F"/>
+  <circle cx="1050" cy="80" r="420" fill="url(#ogb1)"/>
+  <circle cx="120" cy="580" r="380" fill="url(#ogb2)"/>
+  <circle cx="1120" cy="560" r="300" fill="url(#ogb3)"/>
+  <g opacity=".5" stroke="#C7D0F5" stroke-width="1">
+    <path d="M0 120 Q300 60 600 120 T1200 120" fill="none" opacity=".3"/>
+    <path d="M0 520 Q300 580 600 520 T1200 520" fill="none" opacity=".3"/>
+  </g>
+  <g transform="rotate(45 250 315)">
+    <rect x="222" y="220" width="56" height="190" rx="28" fill="url(#og1)"/>
+    <path d="M222 315h56" stroke="rgba(255,255,255,.5)" stroke-width="3" stroke-dasharray="7 7"/>
+    <circle cx="250" cy="258" r="8" fill="#fff" opacity=".92"/>
+  </g>
+  <g font-family="Vazirmatn, Tahoma, sans-serif" direction="rtl">
+    <text x="740" y="330" text-anchor="middle" font-size="120" font-weight="800" fill="#ffffff">اکونوریس</text>
+    <text x="740" y="400" text-anchor="middle" font-size="36" font-weight="500" fill="#C7D0F5">شتاب‌دهنده داروسازی و زیست‌فناوری</text>
+    <text x="740" y="470" text-anchor="middle" font-size="26" font-weight="700" fill="#00D4C2">از ایده تا بازار</text>
+  </g>
+  <g fill="#7C4DFF" opacity=".8">
+    <circle cx="480" cy="180" r="6"/><circle cx="1010" cy="220" r="5"/><circle cx="560" cy="470" r="5"/>
+  </g>
+</svg>

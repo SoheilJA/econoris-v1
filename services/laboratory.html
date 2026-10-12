@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="../" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>آزمایشگاه | اکونوریس</title>
+    <meta
+      name="description"
+      content="آزمایشگاه اکونوریس؛ زیرساخت کامل تجهیزات آنالیزی، فرمولاسیون و کنترل کیفی در دل اکوسیستم شتاب‌دهی، با مدل‌های دسترسی منعطف برای استارتاپ‌های دارویی."
+    />
+    <link rel="canonical" href="../services/laboratory.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="اکونوریس" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:title" content="آزمایشگاه | اکونوریس" />
+    <meta
+      property="og:description"
+      content="از تجهیزات آنالیزی تا کشت سلولی؛ آزمایشگاهِ شروع هر ایده دارویی."
+    />
+    <meta property="og:image" content="assets/img/og-cover.svg" />
+    <meta name="theme-color" content="#070B1F" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <link rel="stylesheet" href="assets/css/services.css" />
+    <style>
+      #econoris-preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        background: #070b1f;
+      }
+    </style>
+    <script>
+      try {
+        if (sessionStorage.getItem("econoris-visited") === "1") {
+          document.documentElement.classList.add("pt-cover");
+        }
+      } catch (e) {}
+    </script>
+    <noscript
+      ><style>
+        #econoris-preloader,
+        #econoris-transition {
+          display: none !important;
+        }
+      </style></noscript
+    >
+  </head>
+  <body
+    data-page="laboratory"
+    class="font-vazir bg-night text-white antialiased"
+  >
+    <div
+      id="econoris-preloader"
+      role="status"
+      aria-label="در حال بارگذاری سایت"
+    ></div>
+    <div id="econoris-header"></div>
+
+    <main id="main">
+      <!-- ═══ هیرو: مولکول تعاملی ═══ -->
+      <section
+        class="hero hero-sm svc-hero aurora grain"
+        aria-label="آزمایشگاه اکونوریس"
+      >
+        <canvas
+          id="svc-canvas"
+          class="page-canvas"
+          data-scene="molecule"
+          aria-hidden="true"
+        ></canvas>
+        <div
+          class="hcontainer relative z-10 flex flex-col items-center justify-center text-center"
+        >
+          <nav class="breadcrumb" aria-label="مسیر صفحه">
+            <a href="index.html">صفحه اصلی</a><span class="sep">/</span>
+            <a href="services/shared-workspace.html">فضای کار اشتراکی</a
+            ><span class="sep">/</span>
+            <span aria-current="page">آزمایشگاه</span>
+          </nav>
+          <span class="eyebrow svc-eb" data-hero-in
+            ><span class="pulse-dot" aria-hidden="true"></span>فضای کار
+            اشتراکی</span
+          >
+          <h1
+            class="mt-5 font-black leading-[1.3]"
+            style="font-size: clamp(1.9rem, 5vw, 3.2rem)"
+            data-hero-in
+          >
+            آزمایشگاه
+          </h1>
+          <!-- [PAGE: laboratory] — پاراگراف مقدمه اصلی اینجا جایگزین شود -->
+          <p
+            class="mt-5 max-w-2xl text-sm leading-8 text-lav sm:text-base"
+            data-hero-in
+          >
+            هر ایده دارویی، دیر یا زود به مرحله‌ای می‌رسد که باید در آزمایشگاه
+            اثبات شود. آزمایشگاه اکونوریس با مجموعه‌ای از تجهیزات تخصصی، همین
+            نقطه شروع را برای تیم‌های استارتاپی فراهم می‌کند.
+          </p>
+          <div class="mt-8 flex flex-wrap justify-center gap-3" data-hero-in>
+            <a href="contact.html" class="btn btn-gradient" data-magnetic
+              >درخواست مشاوره رایگان</a
+            >
+            <a href="#equipment" class="btn btn-ghost" data-magnetic data-scroll
+              >تجهیزات آزمایشگاه</a
+            >
+          </div>
+        </div>
+        <span class="drag-hint" aria-hidden="true"
+          >برای چرخاندن مولکول، بکشید</span
+        >
+      </section>
+
+      <!-- ═══ زیرساخت کامل ═══ -->
+      <section
+        class="sec-sec sec-mint"
+        aria-label="زیرساخت کامل در دل اکوسیستم شتاب‌دهی"
+      >
+        <div class="blob blob-b" aria-hidden="true"></div>
+        <div class="hcontainer relative">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="eyebrow eyebrow-dark svc-eb-d" data-reveal
+              >زیرساخت</span
+            >
+            <h2 class="h2 h2-dark mt-4" data-reveal data-delay="80">
+              یک زیرساخت کامل در دل اکوسیستم شتاب‌دهی
+            </h2>
+          </div>
+          <div
+            class="mt-10 flex flex-wrap justify-center gap-2.5"
+            data-reveal-group
+          >
+            <span
+              class="mini-chip"
+              style="
+                background: #fff;
+                border-color: rgba(0, 168, 153, 0.3);
+                color: #00796b;
+              "
+              >دسترسی به مجموعه‌ای جامع از تجهیزات آزمایشگاهی تخصصی</span
+            >
+            <span
+              class="mini-chip"
+              style="
+                background: #fff;
+                border-color: rgba(0, 168, 153, 0.3);
+                color: #00796b;
+              "
+              >انعطاف‌پذیری در مدل‌های دسترسی و استفاده</span
+            >
+            <span
+              class="mini-chip"
+              style="
+                background: #fff;
+                border-color: rgba(0, 168, 153, 0.3);
+                color: #00796b;
+              "
+              >پشتیبانی فنی و نگهداری تجهیزات</span
+            >
+            <span
+              class="mini-chip"
+              style="
+                background: #fff;
+                border-color: rgba(0, 168, 153, 0.3);
+                color: #00796b;
+              "
+              >امکان انجام طیف متنوعی از آزمایش‌های کلیدی اولیه</span
+            >
+            <span
+              class="mini-chip"
+              style="
+                background: #fff;
+                border-color: rgba(0, 168, 153, 0.3);
+                color: #00796b;
+              "
+              >ایجاد فضای تعامل و همکاری</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ کاوشگر تجهیزات ═══ -->
+      <section
+        id="equipment"
+        class="sec-sec sec-night dots"
+        aria-label="کاوشگر تجهیزات"
+      >
+        <div class="hcontainer">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="eyebrow svc-eb" data-reveal>تجهیزات</span>
+            <h2 class="h2 mt-4" data-reveal data-delay="80">
+              کاوشگر تجهیزات آزمایشگاه
+            </h2>
+            <p class="sub mt-4" data-reveal data-delay="160">
+              پنج دسته تجهیزات؛ از آنالیز تا کشت سلولی.
+            </p>
+          </div>
+          <div class="mt-12" data-tabs data-reveal>
+            <div class="tab-bar" role="tablist" aria-label="دسته‌بندی تجهیزات">
+              <button class="tab-btn" role="tab" data-tab="0">
+                <span class="tb-num">۱</span>آنالیزی
+              </button>
+              <button class="tab-btn" role="tab" data-tab="1">
+                <span class="tb-num">۲</span>فرمولاسیون
+              </button>
+              <button class="tab-btn" role="tab" data-tab="2">
+                <span class="tb-num">۳</span>کنترل کیفی
+              </button>
+              <button class="tab-btn" role="tab" data-tab="3">
+                <span class="tb-num">۴</span>کشت سلولی
+              </button>
+              <button class="tab-btn" role="tab" data-tab="4">
+                <span class="tb-num">۵</span>عمومی
+              </button>
+            </div>
+            <div class="mt-6">
+              <div class="tab-panel" role="tabpanel" data-panel="0">
+                <div class="tp-head">
+                  <span class="tp-num">۰۱</span>
+                  <h3>تجهیزات آنالیزی</h3>
+                </div>
+                <p>
+                  قلب تپنده کنترل کیفیت؛ برای شناسایی و اندازه‌گیری دقیق
+                  ترکیبات.
+                </p>
+                <div class="eq-grid mt-6">
+                  <div class="eq-item">
+                    <b><span class="eq-en">HPLC</span></b
+                    ><span>کروماتوگرافی مایع با کارایی بالا</span>
+                  </div>
+                  <div class="eq-item">
+                    <b><span class="eq-en">GC-MS</span></b
+                    ><span>کروماتوگرافی گازی-طیف‌سنجی جرمی</span>
+                  </div>
+                  <div class="eq-item">
+                    <b><span class="eq-en">UV-Vis</span></b
+                    ><span>طیف‌سنجی فرابنفش-مرئی</span>
+                  </div>
+                  <div class="eq-item">
+                    <b><span class="eq-en">IR</span></b
+                    ><span>طیف‌سنجی مادون قرمز</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-panel" role="tabpanel" data-panel="1" hidden>
+                <div class="tp-head">
+                  <span class="tp-num">۰۲</span>
+                  <h3>تجهیزات فرمولاسیون و آماده‌سازی نمونه</h3>
+                </div>
+                <p>از مخلوط کردن تا آماده‌سازی نمونه‌های اولیه فرمولاسیون.</p>
+                <div class="eq-grid mt-6">
+                  <div class="eq-item">
+                    <b><span class="eq-en">Mixers</span></b
+                    ><span>همزن‌ها</span>
+                  </div>
+                  <div class="eq-item">
+                    <b>سانتریفیوژ</b><span>جداسازی اجزاء</span>
+                  </div>
+                  <div class="eq-item">
+                    <b><span class="eq-en">Ovens</span></b
+                    ><span>آون‌های آزمایشگاهی</span>
+                  </div>
+                  <div class="eq-item">
+                    <b><span class="eq-en">Incubators</span></b
+                    ><span>انکوباتورها</span>
+                  </div>
+                  <div class="eq-item"><b>ترازو</b><span>توزین دقیق</span></div>
+                  <div class="eq-item">
+                    <b>آسیاب</b><span>پودر کردن نمونه‌ها</span>
+                  </div>
+                  <div class="eq-item">
+                    <b>هموژنایزر</b><span>همگن‌سازی</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-panel" role="tabpanel" data-panel="2" hidden>
+                <div class="tp-head">
+                  <span class="tp-num">۰۳</span>
+                  <h3>تجهیزات کنترل کیفیت فیزیکوشیمیایی</h3>
+                </div>
+                <p>ارزیابی ویژگی‌های فیزیکی و شیمیایی فرم‌های دارویی.</p>
+                <div class="eq-grid mt-6">
+                  <div class="eq-item">
+                    <b><span class="eq-en">Dissolution</span></b
+                    ><span>آزمون انحلال</span>
+                  </div>
+                  <div class="eq-item">
+                    <b><span class="eq-en">Hardness</span></b
+                    ><span>سختی‌سنج</span>
+                  </div>
+                  <div class="eq-item">
+                    <b><span class="eq-en">Disintegration</span></b
+                    ><span>تفکیک‌سنج</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-panel" role="tabpanel" data-panel="3" hidden>
+                <div class="tp-head">
+                  <span class="tp-num">۰۴</span>
+                  <h3>امکانات کشت سلولی و بیولوژی مولکولی پایه</h3>
+                </div>
+                <p>برای آزمایش‌های زیستی پایه و کار با سلول‌ها.</p>
+                <div class="eq-grid mt-6">
+                  <div class="eq-item">
+                    <b><span class="eq-en">Laminar Flow Hoods</span></b
+                    ><span>هود جریان لامینار</span>
+                  </div>
+                  <div class="eq-item">
+                    <b>انکوباتور <span class="eq-en">CO2</span></b
+                    ><span>فرهنگ سلولی</span>
+                  </div>
+                  <div class="eq-item">
+                    <b>میکروسکوپ معکوس</b><span>مشاهده سلول‌ها</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-panel" role="tabpanel" data-panel="4" hidden>
+                <div class="tp-head">
+                  <span class="tp-num">۰۵</span>
+                  <h3>تجهیزات عمومی</h3>
+                </div>
+                <p>زیرساخت پایه‌ای که هر آزمایشگاه فعال به آن نیاز دارد.</p>
+                <div class="eq-grid mt-6">
+                  <div class="eq-item">
+                    <b>اتوکلاو</b><span>استریلیزاسیون</span>
+                  </div>
+                  <div class="eq-item">
+                    <b>دوش و چشم‌شوی اضطراری</b><span>ایمنی پرسنل</span>
+                  </div>
+                  <div class="eq-item">
+                    <b>سیستم تصفیه آب</b><span>آب آزمایشگاهی</span>
+                  </div>
+                  <div class="eq-item">
+                    <b>فریزر و یخچال</b><span>نگهداری نمونه‌ها</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ کروماتوگرام HPLC ═══ -->
+      <section class="sec-sec sec-night2" aria-label="آنالیز و کنترل کیفیت">
+        <div class="hcontainer">
+          <div class="grid items-center gap-10 lg:grid-cols-2">
+            <div data-reveal>
+              <span class="eyebrow svc-eb">آنالیز</span>
+              <h2 class="h2 mt-4">آنالیز؛ زبان مشترک کیفیت</h2>
+              <!-- [PAGE: laboratory] — پاراگراف اصلی این بخش اینجا جایگزین شود -->
+              <p class="mt-5 leading-9 text-lav">
+                از توسعه روش آنالیزی پایه تا تست کنترل کیفیت (QC)، مسیر اثبات
+                کیفیت محصول شما در همین آزمایشگاه قابل پیمایش است. نمودار روبرو،
+                نمای تزئینی از یک کروماتوگرام است؛ همان نموداری که هر روز در
+                آزمایشگاه ما به زندگی ادامه می‌دهد.
+              </p>
+            </div>
+            <div class="chromato-card" data-reveal data-delay="120">
+              <svg
+                viewBox="0 0 560 300"
+                role="img"
+                aria-label="نمودار تزئینی کروماتوگرام با پیک‌های متوالی"
+              >
+                <defs>
+                  <linearGradient id="chromGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#00D4C2" />
+                    <stop offset=".6" stop-color="#B6F23A" />
+                    <stop offset="1" stop-color="#00D4C2" />
+                  </linearGradient>
+                </defs>
+                <g class="chrom-grid">
+                  <line x1="50" y1="40" x2="50" y2="250" />
+                  <line x1="50" y1="250" x2="530" y2="250" />
+                  <line x1="50" y1="90" x2="530" y2="90" />
+                  <line x1="50" y1="140" x2="530" y2="140" />
+                  <line x1="50" y1="190" x2="530" y2="190" />
+                  <line x1="150" y1="40" x2="150" y2="250" />
+                  <line x1="250" y1="40" x2="250" y2="250" />
+                  <line x1="350" y1="40" x2="350" y2="250" />
+                  <line x1="450" y1="40" x2="450" y2="250" />
+                </g>
+                <text class="chrom-label" x="290" y="278" text-anchor="middle">
+                  Retention Time
+                </text>
+                <text
+                  class="chrom-label"
+                  x="26"
+                  y="150"
+                  text-anchor="middle"
+                  transform="rotate(-90 26 150)"
+                >
+                  Signal
+                </text>
+                <path
+                  class="chrom-curve"
+                  d="M50 246 C 80 246, 88 244, 96 246 C 104 248, 112 236, 120 246 C 128 250, 140 244, 150 246
+                C 170 246, 178 120, 196 120 C 214 120, 218 246, 240 246
+                C 260 246, 268 60, 288 60 C 308 60, 312 246, 332 246
+                C 352 246, 358 160, 372 160 C 386 160, 390 246, 410 246
+                C 440 246, 470 238, 530 246"
+                />
+                <circle class="peak-dot" cx="196" cy="118" r="5" />
+                <circle class="peak-dot" cx="288" cy="58" r="6" />
+                <circle class="peak-dot" cx="372" cy="158" r="4.5" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ مدل‌های دسترسی ═══ -->
+      <section class="sec-sec sec-light dots-light" aria-label="مدل‌های دسترسی">
+        <div class="hcontainer">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="eyebrow eyebrow-dark svc-eb-d" data-reveal
+              >مدل‌های دسترسی</span
+            >
+            <h2 class="h2 h2-dark mt-4" data-reveal data-delay="80">
+              سه راه برای استفاده از آزمایشگاه
+            </h2>
+          </div>
+          <div class="tile-grid mt-12" data-reveal-group>
+            <div class="am-card">
+              <span class="am-ico" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg
+              ></span>
+              <span class="am-en" dir="ltr">SHARED ACCESS</span>
+              <h3>دسترسی اشتراکی</h3>
+              <p>
+                از تجهیزات به‌صورت مشترک و با رزرو زمان مشخص استفاده کنید؛
+                مقرون‌به‌صرفه برای نیازهای گاه‌به‌گاه.
+              </p>
+            </div>
+            <div class="am-card">
+              <span class="am-ico" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="4" width="20" height="13" rx="2" />
+                  <path d="M8 21h8M12 17v4" /></svg
+              ></span>
+              <span class="am-en" dir="ltr">BENCH SPACE</span>
+              <h3>فضای میز کار</h3>
+              <p>
+                میز کار اختصاصی تیم شما در آزمایشگاه؛ برای پروژه‌هایی که حضور
+                مستمر و پیوسته می‌خواهند.
+              </p>
+            </div>
+            <div class="am-card">
+              <span class="am-ico" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 7h-9m9 5h-5m5 5h-9" />
+                  <path
+                    d="M5 5.5L6.2 8l2.5.4-1.8 1.8.4 2.5L5 11.5 2.7 12.7l.4-2.5L1.3 8.4 3.8 8z"
+                    transform="translate(2.5 2.5) scale(.85)"
+                  /></svg
+              ></span>
+              <span class="am-en" dir="ltr">FEE-FOR-SERVICE</span>
+              <h3>خدمات انجام‌شده</h3>
+              <p>
+                آزمایش را تیم آزمایشگاه برای شما انجام می‌دهد؛ شما فقط روی تفسیر
+                نتایج و تصمیم بعدی تمرکز می‌کنید.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ ۷ آزمایش کلیدی اولیه ═══ -->
+      <section class="sec-sec sec-mint" aria-label="آزمایش‌های کلیدی اولیه">
+        <div class="hcontainer">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="eyebrow eyebrow-dark svc-eb-d" data-reveal
+              >نقطه شروع</span
+            >
+            <h2 class="h2 h2-dark mt-4" data-reveal data-delay="80">
+              هفت آزمایش کلیدی اولیه
+            </h2>
+            <p class="sub sub-dark mt-4" data-reveal data-delay="160">
+              همه چیز از این‌ها شروع می‌شود.
+            </p>
+          </div>
+          <div class="tests mt-12" data-reveal>
+            <div class="test-item">
+              <b>سنتز مقادیر کم</b
+              ><span>تولید اولیه ترکیب برای بررسی امکان‌پذیری</span>
+            </div>
+            <div class="test-item">
+              <b>خالص‌سازی و شناسایی</b
+              ><span>جداسازی و تأیید ساختار ترکیب</span>
+            </div>
+            <div class="test-item">
+              <b>مطالعات پایداری اولیه</b
+              ><span>ارزیابی رفتار ترکیب در شرایط مختلف</span>
+            </div>
+            <div class="test-item">
+              <b>توسعه روش‌های آنالیزی پایه</b
+              ><span>روش اندازه‌گیری قابل اتکا برای ترکیب شما</span>
+            </div>
+            <div class="test-item">
+              <b><span class="eq-en">QC Testing</span></b
+              ><span>تست‌های کنترل کیفیت نمونه‌ها</span>
+            </div>
+            <div class="test-item">
+              <b>مطالعات فرمولاسیون اولیه</b
+              ><span>از ماده مؤثره به فرم قابل استفاده</span>
+            </div>
+            <div class="test-item">
+              <b>تست‌های <span class="eq-en">In Vitro</span></b
+              ><span>ارزیابی زیستی در محیط آزمایشگاهی</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ مزایای استراتژیک ═══ -->
+      <section class="sec-sec sec-night dots" aria-label="مزایای استراتژیک">
+        <div class="hcontainer">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="eyebrow svc-eb" data-reveal>مزایای استراتژیک</span>
+            <h2 class="h2 mt-4" data-reveal data-delay="80">
+              چرا آزمایشگاه شتاب‌دهنده؟
+            </h2>
+          </div>
+          <div class="tile-grid mt-12" data-reveal-group>
+            <div class="tile">
+              <h3>کاهش چشمگیر هزینه‌های سرمایه‌ای و عملیاتی</h3>
+              <p>بدون خرید تجهیزات گران، به همه چیز دسترسی دارید.</p>
+            </div>
+            <div class="tile">
+              <h3>صرفه‌جویی در زمان و افزایش سرعت پیشرفت</h3>
+              <p>از ایده تا اولین نتیجه، در کوتاه‌ترین زمان ممکن.</p>
+            </div>
+            <div class="tile">
+              <h3>دسترسی به تجهیزات گران‌قیمت و پیشرفته</h3>
+              <p>تجهیزاتی که خریدشان برای هیچ استارتاپی منطقی نیست.</p>
+            </div>
+            <div class="tile">
+              <h3>کاهش بار مدیریتی و عملیاتی تیم</h3>
+              <p>نگهداری، کالیبراسیون و پشتیبانی، دغدغه ماست نه شما.</p>
+            </div>
+            <div class="tile">
+              <h3>هم‌افزایی با سایر خدمات شتاب‌دهنده</h3>
+              <p>
+                آزمایشگاه در کنار مشاوره، منابع و فضای کاری معنا پیدا می‌کند.
+              </p>
+            </div>
+            <div class="tile">
+              <h3>انعطاف‌پذیری در مقیاس فعالیت</h3>
+              <p>از یک آزمایش کوچک تا یک برنامه پژوهشی کامل.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ جمع‌بندی ═══ -->
+      <section class="sec-sec sec-cream" aria-label="جمع‌بندی">
+        <div class="hcontainer">
+          <div class="mx-auto max-w-3xl text-center">
+            <h2 class="h2 h2-dark" data-reveal>
+              اولین آزمایش را با اطمینان انجام دهید
+            </h2>
+            <!-- [PAGE: laboratory] — پاراگراف پایانی اصلی اینجا جایگزین شود -->
+            <p class="sub sub-dark mt-5" data-reveal data-delay="100">
+              آزمایشگاه اکونوریس، جای امن و مجهزی برای همان قدم اولی است که
+              سرنوشت هر ایده دارویی را رقم می‌زند. برای هماهنگی بازدید یا رزرو،
+              با ما در تماس باشید.
+            </p>
+            <div class="mt-8" data-reveal data-delay="180">
+              <a href="contact.html" class="btn btn-dark" data-magnetic
+                >هماهنگی بازدید از آزمایشگاه</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="econoris-footer"></div>
+    <div id="econoris-drawer"></div>
+    <div id="econoris-search"></div>
+    <div id="econoris-transition" aria-hidden="true"></div>
+    <div id="econoris-mobilebar"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/content.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/three-scenes.js"></script>
+    <script src="assets/js/page-services.js"></script>
+  </body>
+</html>

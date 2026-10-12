@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="../" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>میز پژوهشی | اکونوریس</title>
+    <meta
+      name="description"
+      content="میز پژوهشی اکونوریس؛ ایستگاه کاری تخصصی با دسترسی به منابع علمی معتبر، ابزارهای جستجو و تحلیل و مشاوره تخصصی برای تیم‌های پژوهشی داروسازی."
+    />
+    <link rel="canonical" href="../services/research-desk.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="اکونوریس" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:title" content="میز پژوهشی | اکونوریس" />
+    <meta
+      property="og:description"
+      content="ایستگاه کاری تخصصی پژوهشگران حوزه دارو؛ از ایده تا مقاله."
+    />
+    <meta property="og:image" content="assets/img/og-cover.svg" />
+    <meta name="theme-color" content="#070B1F" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <link rel="stylesheet" href="assets/css/services.css" />
+    <style>
+      #econoris-preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        background: #070b1f;
+      }
+    </style>
+    <script>
+      try {
+        if (sessionStorage.getItem("econoris-visited") === "1") {
+          document.documentElement.classList.add("pt-cover");
+        }
+      } catch (e) {}
+    </script>
+    <noscript
+      ><style>
+        #econoris-preloader,
+        #econoris-transition {
+          display: none !important;
+        }
+      </style></noscript
+    >
+  </head>
+  <body
+    data-page="research-desk"
+    class="font-vazir bg-night text-white antialiased"
+  >
+    <div
+      id="econoris-preloader"
+      role="status"
+      aria-label="در حال بارگذاری سایت"
+    ></div>
+    <div id="econoris-header"></div>
+
+    <main id="main">
+      <!-- ═══ هیرو: شبکه دانش سه‌بعدی ═══ -->
+      <section
+        class="hero hero-sm svc-hero aurora grain"
+        aria-label="میز پژوهشی"
+      >
+        <canvas
+          id="svc-canvas"
+          class="page-canvas"
+          data-scene="graph"
+          aria-hidden="true"
+        ></canvas>
+        <div class="hex-deco hd-1" aria-hidden="true"></div>
+        <div class="hex-deco hd-2" aria-hidden="true"></div>
+        <div
+          class="hcontainer relative z-10 flex flex-col items-center justify-center text-center"
+        >
+          <nav class="breadcrumb" aria-label="مسیر صفحه">
+            <a href="index.html">صفحه اصلی</a><span class="sep">/</span>
+            <a href="services/shared-workspace.html">فضای کار اشتراکی</a
+            ><span class="sep">/</span>
+            <span aria-current="page">میز پژوهشی</span>
+          </nav>
+          <span class="eyebrow svc-eb" data-hero-in
+            ><span class="pulse-dot" aria-hidden="true"></span>فضای کار
+            اشتراکی</span
+          >
+          <h1
+            class="mt-5 font-black leading-[1.3]"
+            style="font-size: clamp(1.9rem, 5vw, 3.2rem)"
+            data-hero-in
+          >
+            میز پژوهشی
+          </h1>
+          <p
+            class="mt-5 max-w-2xl text-sm leading-8 text-lav sm:text-base"
+            data-hero-in
+          >
+            ایستگاه کاری تخصصی برای پژوهشگران و تیم‌های استارتاپی حوزه داروسازی؛
+            جایی برای مطالعه، جستجو در منابع علمی معتبر و پیشبرد کارهای پژوهشی
+            در فضایی آرام، مجهز و پشتیبانی‌شده.
+          </p>
+          <div class="mt-8 flex flex-wrap justify-center gap-3" data-hero-in>
+            <a href="contact.html" class="btn btn-gradient" data-magnetic
+              >درخواست مشاوره رایگان</a
+            >
+            <a href="tel:+989192639746" class="btn btn-ghost" data-magnetic
+              >۰۹۱۹-۲۶۳-۹۷۴۶</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ میز پژوهشی چیست؟ ═══ -->
+      <section
+        class="sec-sec sec-light dots-light"
+        aria-label="میز پژوهشی اکونوریس چیست"
+      >
+        <div class="blob blob-a" aria-hidden="true"></div>
+        <div
+          class="hcontainer relative grid items-center gap-10 lg:grid-cols-2"
+        >
+          <div data-reveal>
+            <span class="eyebrow eyebrow-dark svc-eb-d">آشنایی با سرویس</span>
+            <h2 class="h2 h2-dark mt-4">میز پژوهشی اکونوریس چیست؟</h2>
+            <!-- [PAGE: research-desk] — پاراگراف متن اصلی اینجا جایگزین شود -->
+            <p class="mt-5 leading-9 text-ink/75">
+              میز پژوهشی، فقط یک میز نیست؛ دروازه‌ای به جهان دانش تخصصی داروسازی
+              است. ترکیبی از فضای فیزیکی آرام و دسترسی به منابع، ابزارها و
+              راهنمایی تخصصی، که فرآیند پژوهش را برای تیم‌های علمی سریع‌تر و
+              مطمئن‌تر می‌کند.
+            </p>
+            <p class="mt-4 leading-9 text-ink/75">
+              با تکیه بر این بستر، تیم‌های پژوهشی می‌توانند:
+            </p>
+          </div>
+          <ul class="chk-list" data-reveal data-delay="120">
+            <li class="chk-item">
+              <span class="chk-box"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M20 6L9 17l-5-5" /></svg
+              ></span>
+              <div>
+                <b>تصمیمات مبتنی بر داده بگیرند</b
+                ><span>با تکیه بر منابع معتبر و به‌روز علمی</span>
+              </div>
+            </li>
+            <li class="chk-item">
+              <span class="chk-box"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M20 6L9 17l-5-5" /></svg
+              ></span>
+              <div>
+                <b>ریسک‌های تحقیقاتی را کاهش دهند</b
+                ><span>با شناخت دقیق‌تر پیش از وقوع چالش‌ها</span>
+              </div>
+            </li>
+            <li class="chk-item">
+              <span class="chk-box"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M20 6L9 17l-5-5" /></svg
+              ></span>
+              <div>
+                <b>هزینه‌های تحقیق و توسعه را بهینه سازند</b
+                ><span>با حذف مسیرهای اشتباه و پرهزینه</span>
+              </div>
+            </li>
+            <li class="chk-item">
+              <span class="chk-box"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M20 6L9 17l-5-5" /></svg
+              ></span>
+              <div>
+                <b>سرعت ورود به بازار را افزایش دهند</b
+                ><span>پژوهش سریع‌تر یعنی محصول زودتر</span>
+              </div>
+            </li>
+            <li class="chk-item">
+              <span class="chk-box"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M20 6L9 17l-5-5" /></svg
+              ></span>
+              <div>
+                <b>کیفیت و اثربخشی محصولات خود را بهبود بخشند</b
+                ><span>با تکیه بر دانش جامع و دقیق</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ═══ طیف گسترده خدمات ═══ -->
+      <section class="sec-sec sec-night dots" aria-label="طیف گسترده خدمات">
+        <div class="hcontainer">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="eyebrow svc-eb" data-reveal>خدمات</span>
+            <h2 class="h2 mt-4" data-reveal data-delay="80">
+              طیف گسترده خدمات به استارتاپ‌های دارویی
+            </h2>
+            <p class="sub mt-4" data-reveal data-delay="160">
+              پنج لایه خدماتی که کنار هم، یک میز پژوهشی کامل می‌سازند.
+            </p>
+          </div>
+
+          <div class="mt-12" data-tabs data-reveal>
+            <div class="tab-bar" role="tablist" aria-label="خدمات میز پژوهشی">
+              <button class="tab-btn" role="tab" data-tab="0">
+                <span class="tb-num">۱</span>دسترسی به منابع اطلاعاتی
+              </button>
+              <button class="tab-btn" role="tab" data-tab="1">
+                <span class="tb-num">۲</span>ابزارهای جستجو و تحلیل
+              </button>
+              <button class="tab-btn" role="tab" data-tab="2">
+                <span class="tb-num">۳</span>مشاوره و راهنمایی تخصصی
+              </button>
+              <button class="tab-btn" role="tab" data-tab="3">
+                <span class="tb-num">۴</span>شبکه ارتباطات و همکاری
+              </button>
+              <button class="tab-btn" role="tab" data-tab="4">
+                <span class="tb-num">۵</span>خدمات ویژه استارتاپ‌ها
+              </button>
+            </div>
+            <div class="mt-6">
+              <!-- [PAGE: research-desk] — پاراگراف‌های اصلی هر تب اینجا جایگزین شوند -->
+              <div class="tab-panel" role="tabpanel" data-panel="0">
+                <div class="tp-head">
+                  <span class="tp-num">۰۱</span>
+                  <h3>دسترسی به منابع اطلاعاتی علمی و تخصصی</h3>
+                </div>
+                <p>
+                  پژوهشگران میز پژوهشی به مجموعه‌ای گسترده از منابع علمی معتبر —
+                  از پایگاه‌های داده بین‌المللی گرفته تا ژورنال‌های تخصصی
+                  داروسازی — دسترسی دارند؛ بدون دغدغه اشتراک فردی و محدودیت‌های
+                  دسترسی.
+                </p>
+              </div>
+              <div class="tab-panel" role="tabpanel" data-panel="1" hidden>
+                <div class="tp-head">
+                  <span class="tp-num">۰۲</span>
+                  <h3>ابزارهای جستجو و تحلیل اطلاعات</h3>
+                </div>
+                <p>
+                  جستجوی پیشرفته، فیلترکردن نتایج و تحلیل اطلاعات علمی با
+                  ابزارهای مناسب انجام می‌شود تا در کمترین زمان، دقیق‌ترین منابع
+                  مرتبط با موضوع پژوهش پیدا شوند.
+                </p>
+              </div>
+              <div class="tab-panel" role="tabpanel" data-panel="2" hidden>
+                <div class="tp-head">
+                  <span class="tp-num">۰۳</span>
+                  <h3>مشاوره و راهنمایی تخصصی</h3>
+                </div>
+                <p>
+                  در مسیر جستجو، انتخاب منابع و طراحی استراتژی پژوهش، متخصصین
+                  اکونوریس راهنمای تیم‌ها هستند تا مسیر تحقیق با اطمینان و در
+                  جهت درست طی شود.
+                </p>
+              </div>
+              <div class="tab-panel" role="tabpanel" data-panel="3" hidden>
+                <div class="tp-head">
+                  <span class="tp-num">۰۴</span>
+                  <h3>شبکه ارتباطات و همکاری</h3>
+                </div>
+                <p>
+                  حضور در فضای مشترک اکونوریس یعنی هم‌جواری با پژوهشگران و
+                  تیم‌های دیگر؛ فرصتی برای تبادل دانش، هم‌فکری و شکل‌گیری
+                  همکاری‌های علمی جدید.
+                </p>
+              </div>
+              <div class="tab-panel" role="tabpanel" data-panel="4" hidden>
+                <div class="tp-head">
+                  <span class="tp-num">۰۵</span>
+                  <h3>خدمات ویژه برای استارتاپ‌های دارویی</h3>
+                </div>
+                <p>
+                  نیازهای خاص استارتاپ‌های حوزه دارو — از رصد علمی حوزه فعالیت
+                  تا پیگیری آخرین یافته‌ها و روندها — در قالب خدمات متناسب با
+                  همین میز پژوهشی پاسخ داده می‌شود.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ مزیت‌ها ═══ -->
+      <section
+        class="sec-sec sec-mint"
+        aria-label="مزیت‌های شتاب‌دهنده اکونوریس"
+      >
+        <div class="hcontainer">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="eyebrow eyebrow-dark svc-eb-d" data-reveal
+              >چرا اکونوریس؟</span
+            >
+            <h2 class="h2 h2-dark mt-4" data-reveal data-delay="80">
+              مزیت‌های شتاب‌دهنده اکونوریس
+            </h2>
+          </div>
+          <div class="tile-grid mt-12" data-reveal-group>
+            <div class="tile tile-l">
+              <h3>کاهش زمان و هزینه تحقیق و توسعه</h3>
+              <p>
+                دسترسی سریع به منابع و ابزارها، مسیر پژوهش را کوتاه‌تر می‌کند.
+              </p>
+            </div>
+            <div class="tile tile-l">
+              <h3>بهبود کیفیت تصمیم‌گیری</h3>
+              <p>
+                تصمیم‌هایی که بر داده و منابع معتبر تکیه دارند، نه حدس و گمان.
+              </p>
+            </div>
+            <div class="tile tile-l">
+              <h3>کاهش ریسک‌های تحقیقاتی</h3>
+              <p>پیش‌بینی بهتر چالش‌ها، پیش از آن که رخ دهند.</p>
+            </div>
+            <div class="tile tile-l">
+              <h3>تسریع فرآیند ورود به بازار</h3>
+              <p>پژوهش سریع‌تر و دقیق‌تر یعنی رسیدن زودتر به محصول.</p>
+            </div>
+            <div class="tile tile-l">
+              <h3>افزایش شانس موفقیت</h3>
+              <p>تکیه بر دانش جامع، احتمال موفقیت طرح را بالا می‌برد.</p>
+            </div>
+            <div class="tile tile-l">
+              <h3>دسترسی به دانش تخصصی</h3>
+              <p>مجموعه‌ای از منابعی که به‌سختی در دسترس تیم‌ها هستند.</p>
+            </div>
+            <div class="tile tile-l">
+              <h3>افزایش اعتبار</h3>
+              <p>استناد به منابع معتبر، اعتبار علمی کار شما را تقویت می‌کند.</p>
+            </div>
+            <div class="tile tile-l">
+              <h3>ایجاد شبکه ارتباطی</h3>
+              <p>پیوند با پژوهشگران و متخصصین حوزه دارو و زیست‌فناوری.</p>
+            </div>
+            <div class="tile tile-l">
+              <h3>رقابت‌پذیری بیشتر</h3>
+              <p>آگاهی دقیق از آخرین یافته‌ها و روندهای علمی جهان.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ جمع‌بندی ═══ -->
+      <section class="sec-sec sec-night2" aria-label="جمع‌بندی">
+        <div class="hcontainer">
+          <div class="mx-auto max-w-3xl text-center">
+            <h2 class="h2" data-reveal>ایستگاه بعدی پژوهش شما</h2>
+            <!-- [PAGE: research-desk] — پاراگراف پایانی اصلی اینجا جایگزین شود -->
+            <p class="sub mt-5" data-reveal data-delay="100">
+              میز پژوهشی اکونوریس، بستری است که ایده‌های علمی را از مرحله
+              «جستجو» تا «تحلیل» همراهی می‌کند. اگر تیم پژوهشی شما به چنین فضایی
+              نیاز دارد، همین امروز قدم اول را بردارید.
+            </p>
+            <div class="mt-8" data-reveal data-delay="180">
+              <a href="contact.html" class="btn btn-gradient" data-magnetic
+                >رزرو میز پژوهشی</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="econoris-footer"></div>
+    <div id="econoris-drawer"></div>
+    <div id="econoris-search"></div>
+    <div id="econoris-transition" aria-hidden="true"></div>
+    <div id="econoris-mobilebar"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/content.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/three-scenes.js"></script>
+    <script src="assets/js/page-services.js"></script>
+  </body>
+</html>

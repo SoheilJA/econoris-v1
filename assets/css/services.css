@@ -1,0 +1,1568 @@
+/* ═══════════════ Econoris — استایل صفحات خدمات و دسته‌ها ═══════════════ */
+
+/* ── رنگ لهجه هر صفحه ── */
+body[data-page="research-desk"] {
+  --sa1: #7c4dff;
+  --sa2: #2f6bff;
+  --sa3: #00d4c2;
+}
+body[data-page="private-research-room"] {
+  --sa1: #ff4fa3;
+  --sa2: #ff6b6b;
+  --sa3: #ffb938;
+}
+body[data-page="laboratory"] {
+  --sa1: #00d4c2;
+  --sa2: #b6f23a;
+  --sa3: #2f6bff;
+}
+body[data-page="high-speed-internet"] {
+  --sa1: #22d3ee;
+  --sa2: #2f6bff;
+  --sa3: #b6f23a;
+}
+body[data-page="legal-consulting"] {
+  --sa1: #ffb938;
+  --sa2: #ff8a3c;
+  --sa3: #7c4dff;
+}
+body[data-page="information-resources"] {
+  --sa1: #10b981;
+  --sa2: #2f6bff;
+  --sa3: #7c4dff;
+}
+body[data-page="shared-workspace"] {
+  --sa1: #2f6bff;
+  --sa2: #7c4dff;
+  --sa3: #00d4c2;
+}
+body[data-page="idea-support"] {
+  --sa1: #ff4fa3;
+  --sa2: #ffb938;
+  --sa3: #ff6b6b;
+}
+body[data-page="research-projects-support"] {
+  --sa1: #00d4c2;
+  --sa2: #2f6bff;
+  --sa3: #b6f23a;
+}
+
+/* ── هیروی صفحات خدمات ── */
+.svc-hero {
+  min-height: 70svh;
+}
+.eyebrow.svc-eb {
+  color: #fff;
+  background: color-mix(in srgb, var(--sa1) 20%, rgba(255, 255, 255, 0.05));
+  border-color: color-mix(in srgb, var(--sa1) 45%, transparent);
+}
+.eyebrow.svc-eb .pulse-dot {
+  background: var(--sa1);
+}
+.eyebrow.svc-eb .pulse-dot::after {
+  border-color: var(--sa1);
+}
+.eyebrow-dark.svc-eb-d {
+  color: var(--ink);
+  background: color-mix(in srgb, var(--sa1) 10%, #fff);
+  border-color: color-mix(in srgb, var(--sa1) 35%, transparent);
+}
+.drag-hint {
+  position: absolute;
+  bottom: 1.1rem;
+  inset-inline: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+  font-size: 0.72rem;
+  color: var(--lav);
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+/* ── ریویل عمومی صفحات (JS-only؛ بدون JS محتوا دیده می‌شود) ── */
+[data-io].io-init {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s cubic-bezier(0.2, 0.65, 0.25, 1),
+    transform 0.7s cubic-bezier(0.2, 0.65, 0.25, 1);
+}
+[data-io].io-init.on {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── چک‌لیست متحرک ── */
+.chk-list {
+  display: grid;
+  gap: 0.85rem;
+}
+.chk-item {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  padding: 1rem 1.1rem;
+  border-radius: 1.15rem;
+  background: #fff;
+  border: 1.5px solid rgba(12, 18, 51, 0.08);
+  transition:
+    border-color 0.45s,
+    box-shadow 0.45s,
+    transform 0.45s;
+}
+.chk-box {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 0.7rem;
+  border: 2px solid rgba(12, 18, 51, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  transition: 0.4s;
+  margin-top: 0.15rem;
+}
+.chk-box svg {
+  width: 15px;
+  height: 15px;
+}
+.chk-item b {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+.chk-item span {
+  font-size: 0.78rem;
+  color: rgba(12, 18, 51, 0.55);
+}
+.chk-item.on {
+  border-color: color-mix(in srgb, var(--sa1) 45%, transparent);
+  box-shadow: 0 18px 44px -26px color-mix(in srgb, var(--sa1) 55%, transparent);
+  transform: translateX(-4px);
+}
+[dir="rtl"] .chk-item.on {
+  transform: translateX(4px);
+}
+.chk-item.on .chk-box {
+  background: linear-gradient(135deg, var(--sa1), var(--sa2));
+  border-color: transparent;
+  color: #fff;
+}
+
+/* ── تب‌ها ── */
+.tab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+.tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 0.68rem 1.25rem;
+  border-radius: 1rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--lav);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tb-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 0.6rem;
+  background: rgba(255, 255, 255, 0.09);
+  font-size: 0.75rem;
+  transition: 0.3s;
+}
+.tab-btn:hover {
+  color: #fff;
+  border-color: color-mix(in srgb, var(--sa1) 55%, transparent);
+}
+.tab-btn[aria-selected="true"] {
+  background: linear-gradient(135deg, var(--sa1), var(--sa2));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 14px 32px -12px color-mix(in srgb, var(--sa1) 65%, transparent);
+}
+.tab-btn[aria-selected="true"] .tb-num {
+  background: rgba(255, 255, 255, 0.2);
+}
+.tab-panel {
+  border-radius: 1.5rem;
+  padding: clamp(1.4rem, 3vw, 2.2rem);
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+.tab-panel[hidden] {
+  display: none;
+}
+.tab-panel.panel-in {
+  animation: panelIn 0.5s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+.tp-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.tp-num {
+  font-size: 2.6rem;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--sa1), var(--sa2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.tab-panel h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #fff;
+}
+.tab-panel p {
+  margin: 0.9rem 0 0;
+  font-size: 0.92rem;
+  line-height: 2.1;
+  color: var(--lav);
+}
+
+/* ── کاشی‌ها ── */
+.tile-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+.tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.3rem;
+  padding: 1.5rem 1.3rem;
+  background: linear-gradient(
+    170deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  transition:
+    transform 0.4s,
+    border-color 0.4s;
+}
+.tile:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--sa1) 50%, transparent);
+}
+.tile::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--sa1) 24%, transparent),
+    transparent 70%
+  );
+  top: -90px;
+  inset-inline-end: -70px;
+  pointer-events: none;
+}
+.tile-ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 1rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--sa1), var(--sa2));
+  box-shadow: 0 12px 26px -10px color-mix(in srgb, var(--sa1) 60%, transparent);
+}
+.tile-ico svg {
+  width: 21px;
+  height: 21px;
+}
+.tile h3 {
+  font-size: 0.98rem;
+  font-weight: 900;
+  color: #fff;
+  margin: 0.95rem 0 0.45rem;
+}
+.tile p {
+  font-size: 0.82rem;
+  line-height: 1.95;
+  color: var(--lav);
+  margin: 0;
+}
+.tile-l {
+  background: #fff;
+  border: 1.5px solid rgba(12, 18, 51, 0.07);
+}
+.tile-l h3 {
+  color: var(--ink);
+}
+.tile-l p {
+  color: rgba(12, 18, 51, 0.65);
+}
+.tile-l:hover {
+  border-color: color-mix(in srgb, var(--sa1) 45%, transparent);
+  box-shadow: 0 24px 54px -30px color-mix(in srgb, var(--sa1) 45%, transparent);
+}
+
+/* ── فصل‌های چسبان (اتاق اختصاصی) ── */
+.pr-grid {
+  display: grid;
+  gap: 2.5rem;
+}
+@media (min-width: 1024px) {
+  .pr-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+  }
+}
+.pr-visual {
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .pr-visual {
+    position: sticky;
+    top: calc(var(--header-h) + 18px);
+    align-self: start;
+  }
+}
+.pr-canvas-box {
+  position: relative;
+  height: 400px;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      420px 280px at 50% 62%,
+      rgba(255, 79, 163, 0.15),
+      transparent
+    ),
+    linear-gradient(170deg, #140a2e, #0b071d);
+  border: 1px solid rgba(255, 79, 163, 0.2);
+}
+.pr-canvas-box canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.pr-stage-badge {
+  position: absolute;
+  top: 1rem;
+  inset-inline-start: 1rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.95rem;
+  border-radius: 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #fff;
+  background: rgba(12, 7, 26, 0.7);
+  border: 1px solid rgba(255, 79, 163, 0.4);
+  backdrop-filter: blur(8px);
+}
+.pr-stage-badge b {
+  font-size: 1rem;
+  color: var(--sa1);
+}
+.pr-chapter {
+  border-radius: 1.4rem;
+  padding: 1.5rem 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  opacity: 0.55;
+  transition: 0.45s;
+  margin-bottom: 1rem;
+}
+.pr-chapter.on {
+  opacity: 1;
+  border-color: rgba(255, 79, 163, 0.42);
+  background: rgba(255, 79, 163, 0.06);
+}
+.pr-chapter h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #fff;
+}
+.pr-chnum {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 0.9rem;
+  font-weight: 900;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: 0.4s;
+}
+.pr-chapter.on .pr-chnum {
+  background: linear-gradient(135deg, var(--sa1), var(--sa2));
+  border-color: transparent;
+  box-shadow: 0 10px 26px -8px rgba(255, 79, 163, 0.6);
+}
+.pr-chapter p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 2.05;
+  color: var(--lav);
+}
+
+/* ── کارت‌های درخشان شماره‌دار ── */
+.glow-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.4rem;
+  padding: 1.6rem 1.4rem;
+  background: linear-gradient(165deg, #160f36, #0d0a26);
+  border: 1px solid color-mix(in srgb, var(--sa1) 24%, transparent);
+  transition:
+    transform 0.4s,
+    border-color 0.4s,
+    box-shadow 0.4s;
+}
+.glow-card:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--sa1) 60%, transparent);
+  box-shadow: 0 26px 60px -28px color-mix(in srgb, var(--sa1) 50%, transparent);
+}
+.gc-num {
+  font-size: 2.1rem;
+  font-weight: 900;
+  line-height: 1.15;
+  background: linear-gradient(135deg, var(--sa1), var(--sa2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.glow-card h3 {
+  margin: 0.55rem 0 0.45rem;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #fff;
+}
+.glow-card p {
+  margin: 0;
+  font-size: 0.83rem;
+  line-height: 1.95;
+  color: var(--lav);
+}
+
+/* ── کارت‌های برگردان (flip) ── */
+.flip {
+  position: relative;
+  height: 250px;
+  perspective: 1100px;
+  cursor: pointer;
+  outline: none;
+}
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+.flip:hover .flip-inner,
+.flip:focus-visible .flip-inner,
+.flip.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+.flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 1.4rem;
+  padding: 1.7rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.55rem;
+}
+.flip-front {
+  background: #fff;
+  border: 1.5px solid rgba(12, 18, 51, 0.08);
+  box-shadow: 0 24px 54px -32px rgba(12, 18, 51, 0.4);
+}
+.flip-front .ff-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--sa1);
+  letter-spacing: 0.04em;
+}
+.flip-front h3 {
+  margin: 0.2rem 0;
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--ink);
+}
+.flip-front p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 2;
+  color: rgba(12, 18, 51, 0.65);
+}
+.flip-hint {
+  margin-top: 0.9rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(12, 18, 51, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.flip-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(150deg, #151040, #0c1233);
+  border: 1px solid color-mix(in srgb, var(--sa1) 45%, transparent);
+  color: #fff;
+}
+.flip-back .fb-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--sa1);
+}
+.flip-back h4 {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  font-weight: 900;
+}
+.flip-back p {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 2;
+  color: var(--lav);
+}
+
+/* ── مهر حقوقی ── */
+.stamp-card {
+  position: relative;
+  border-radius: 1.4rem;
+  padding: 1.6rem 5rem 1.5rem 1.4rem;
+  background: #fff;
+  border: 1.5px solid rgba(12, 18, 51, 0.08);
+  transition:
+    transform 0.4s,
+    box-shadow 0.4s;
+}
+.stamp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 26px 56px -30px rgba(12, 18, 51, 0.35);
+}
+.stamp-card .sc-num {
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: var(--sa1);
+}
+.stamp-card h3 {
+  margin: 0.35rem 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1.75;
+}
+.stamp-card p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.95;
+  color: rgba(12, 18, 51, 0.65);
+}
+.seal {
+  position: absolute;
+  top: 1.1rem;
+  inset-inline-end: 1.1rem;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 2.5px solid var(--sa1);
+  color: var(--sa1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-14deg) scale(2.2);
+  opacity: 0;
+  pointer-events: none;
+}
+.seal::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  border: 1.5px dashed color-mix(in srgb, var(--sa1) 60%, transparent);
+}
+.seal svg {
+  width: 22px;
+  height: 22px;
+}
+.stamp-card.stamped .seal {
+  animation: stampIn 0.5s cubic-bezier(0.2, 0.85, 0.3, 1.25) forwards;
+}
+@keyframes stampIn {
+  0% {
+    transform: rotate(-38deg) scale(2.4);
+    opacity: 0;
+  }
+  55% {
+    transform: rotate(-10deg) scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-14deg) scale(1);
+    opacity: 0.95;
+  }
+}
+
+/* ── ترازو حقوقی ── */
+.scales {
+  width: min(340px, 78vw);
+  margin-inline: auto;
+  display: block;
+}
+.sc-beam {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: beamTilt 5.5s ease-in-out infinite alternate;
+}
+@keyframes beamTilt {
+  from {
+    transform: rotate(-4deg);
+  }
+  to {
+    transform: rotate(4deg);
+  }
+}
+.sc-arm {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+  animation: armLevel 5.5s ease-in-out infinite alternate;
+}
+@keyframes armLevel {
+  from {
+    transform: rotate(4deg);
+  }
+  to {
+    transform: rotate(-4deg);
+  }
+}
+.contract {
+  border-radius: 1.5rem;
+  padding: 1.6rem;
+  background: linear-gradient(170deg, #171233, #0e0b24);
+  border: 1px solid rgba(255, 185, 56, 0.25);
+}
+.contract-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+}
+.contract-head b {
+  color: #fff;
+  font-size: 0.95rem;
+}
+.c-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.c-line {
+  height: 9px;
+  border-radius: 99px;
+  background: rgba(199, 208, 245, 0.14);
+}
+.clause {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.8rem;
+  border: 1px dashed rgba(255, 185, 56, 0.35);
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: default;
+  transition: 0.3s;
+  margin-top: 0.4rem;
+}
+.clause:hover {
+  background: rgba(255, 185, 56, 0.1);
+  border-style: solid;
+  transform: translateX(-3px);
+}
+[dir="rtl"] .clause:hover {
+  transform: translateX(3px);
+}
+
+/* ── نوار ریسک ── */
+.risk-band {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #230710, #12030a);
+}
+.risk-band::before {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 107, 0.16),
+    transparent 65%
+  );
+  top: -200px;
+  inset-inline-start: -140px;
+  pointer-events: none;
+}
+.risk-card {
+  position: relative;
+  border-radius: 1.4rem;
+  padding: 1.8rem 1.5rem;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 107, 107, 0.28);
+  transition: 0.4s;
+}
+.risk-card:hover {
+  border-color: rgba(255, 107, 107, 0.65);
+  transform: translateY(-5px);
+}
+.risk-ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 1rem;
+  color: var(--coral);
+  background: rgba(255, 107, 107, 0.12);
+  border: 1px solid rgba(255, 107, 107, 0.35);
+}
+.risk-ico svg {
+  width: 23px;
+  height: 23px;
+}
+.risk-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.02rem;
+  font-weight: 900;
+  color: #fff;
+}
+.risk-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 2;
+  color: #f3b8b8;
+}
+
+/* ── گیج و نوارهای دانلود ── */
+.gauge {
+  width: min(290px, 74vw);
+  display: block;
+  margin-inline: auto;
+}
+.gauge .g-bg {
+  fill: none;
+  stroke: rgba(34, 211, 238, 0.14);
+  stroke-width: 14;
+  stroke-linecap: round;
+}
+.gauge .g-fill {
+  fill: none;
+  stroke: url(#gaugeGrad);
+  stroke-width: 14;
+  stroke-linecap: round;
+  stroke-dasharray: 251.3;
+  stroke-dashoffset: 251.3;
+  transition: stroke-dashoffset 1.7s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+.gauge.on .g-fill {
+  stroke-dashoffset: 44;
+}
+.gauge .g-needle {
+  stroke: #b6f23a;
+  stroke-width: 4;
+  stroke-linecap: round;
+  transform-box: view-box;
+  transform-origin: 100px 100px;
+  transform: rotate(-90deg);
+  transition: transform 1.7s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+.gauge.on .g-needle {
+  transform: rotate(52deg);
+}
+.gauge .g-hub {
+  fill: #0a0f2a;
+  stroke: #b6f23a;
+  stroke-width: 3;
+}
+.race {
+  display: grid;
+  gap: 1rem;
+  max-width: 520px;
+  margin-inline: auto;
+}
+.rb-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--lav);
+  margin-bottom: 0.45rem;
+}
+.rb-label b {
+  color: #fff;
+}
+.rb-track {
+  height: 10px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+.rb-track i {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--sa1), var(--sa3));
+  transition: width 1.3s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+
+/* ── چیپ‌های پایگاه‌های علمی ── */
+.db-chips {
+  position: relative;
+  min-height: 150px;
+}
+.db-chip {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.05rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(34, 211, 238, 0.32);
+  color: #cff8ff;
+  backdrop-filter: blur(6px);
+  animation: chipFloat 6s ease-in-out infinite;
+  box-shadow: 0 14px 32px -16px rgba(34, 211, 238, 0.45);
+  white-space: nowrap;
+}
+.db-chip::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--sa3);
+  box-shadow: 0 0 10px var(--sa3);
+}
+
+/* ── ریل جریان داده ── */
+.ds-card {
+  min-width: min(320px, 84%);
+  scroll-snap-align: start;
+  position: relative;
+  border-radius: 1.4rem;
+  padding: 1.5rem 1.4rem;
+  background: linear-gradient(
+    170deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  overflow: hidden;
+}
+.ds-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline: 1.4rem;
+  height: 3px;
+  border-radius: 0 0 6px 6px;
+  background: linear-gradient(90deg, var(--sa1), var(--sa3));
+  transform: scaleX(0.3);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+.ds-card:hover::before {
+  transform: scaleX(1);
+}
+.ds-ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 1rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--sa1), var(--sa2));
+  box-shadow: 0 12px 28px -12px color-mix(in srgb, var(--sa1) 65%, transparent);
+}
+.ds-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.75;
+}
+.ds-card p {
+  margin: 0;
+  font-size: 0.83rem;
+  line-height: 1.95;
+  color: var(--lav);
+}
+
+/* ── کروماتوگرام HPLC ── */
+.chromato-card {
+  border-radius: 1.6rem;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  background: linear-gradient(170deg, #052430, #03161f);
+  border: 1px solid rgba(0, 212, 194, 0.25);
+  overflow: hidden;
+}
+.chrom-grid line {
+  stroke: rgba(0, 212, 194, 0.1);
+  stroke-width: 1;
+}
+.chrom-axis {
+  stroke: rgba(0, 212, 194, 0.35);
+  stroke-width: 1.5;
+}
+.chrom-curve {
+  fill: none;
+  stroke: url(#chromGrad);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 6px rgba(0, 212, 194, 0.5));
+}
+.peak-dot {
+  fill: #b6f23a;
+  opacity: 0;
+  transition:
+    opacity 0.5s,
+    transform 0.5s;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.peak-dot.on {
+  opacity: 1;
+  transform: scale(1);
+}
+.chrom-label {
+  fill: #7fd8cd;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ── کاشی تجهیزات ── */
+.eq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.8rem;
+}
+.eq-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1rem 0.9rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  transition: 0.3s;
+}
+.eq-item:hover {
+  border-color: color-mix(in srgb, var(--sa1) 55%, transparent);
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.07);
+}
+.eq-item b {
+  font-size: 0.9rem;
+  color: #fff;
+  line-height: 1.7;
+}
+.eq-item span {
+  font-size: 0.7rem;
+  color: var(--lav);
+  line-height: 1.7;
+}
+.eq-en {
+  direction: ltr;
+  display: inline-block;
+}
+
+/* ── مدل‌های دسترسی ── */
+.am-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  padding: 1.7rem 1.5rem;
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s;
+}
+.am-card:hover {
+  border-color: color-mix(in srgb, var(--sa1) 55%, transparent);
+  transform: translateY(-6px);
+  box-shadow: 0 26px 60px -30px color-mix(in srgb, var(--sa1) 50%, transparent);
+}
+.am-en {
+  font-size: 0.64rem;
+  letter-spacing: 0.22em;
+  font-weight: 800;
+  color: var(--sa1);
+}
+.am-card h3 {
+  margin: 0.5rem 0 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #fff;
+}
+.am-card p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 2;
+  color: var(--lav);
+}
+.am-ico {
+  position: absolute;
+  top: 1.3rem;
+  inset-inline-end: 1.3rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sa1);
+  background: color-mix(in srgb, var(--sa1) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--sa1) 35%, transparent);
+}
+.am-ico svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ── تایم‌لاین ۷ آزمایش کلیدی ── */
+.tests {
+  position: relative;
+  max-width: 760px;
+  margin-inline: auto;
+  padding-inline-start: 2rem;
+}
+.tests::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0.55rem;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 2px;
+  border-radius: 99px;
+  background: linear-gradient(180deg, var(--sa1), var(--sa2));
+}
+.test-item {
+  position: relative;
+  padding: 0.95rem 1.2rem;
+  margin-bottom: 0.9rem;
+  border-radius: 1.1rem;
+  background: #fff;
+  border: 1.5px solid rgba(12, 18, 51, 0.07);
+  transition: 0.4s;
+}
+.test-item::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: calc(-2rem + 0.1rem);
+  top: 1.25rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid color-mix(in srgb, var(--sa1) 45%, #fff);
+  transition: 0.4s;
+}
+.test-item.on {
+  border-color: color-mix(in srgb, var(--sa1) 45%, transparent);
+  box-shadow: 0 18px 40px -26px color-mix(in srgb, var(--sa1) 55%, transparent);
+}
+.test-item.on::before {
+  background: linear-gradient(135deg, var(--sa1), var(--sa2));
+  border-color: transparent;
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--sa1) 15%, transparent);
+}
+.test-item b {
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+.test-item span {
+  display: block;
+  font-size: 0.76rem;
+  color: rgba(12, 18, 51, 0.55);
+  margin-top: 0.2rem;
+}
+
+/* ── جستجوی مداری (منابع اطلاعاتی) ── */
+.orbit-stage {
+  position: relative;
+  height: 460px;
+  perspective: 1000px;
+}
+.orbit-core {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: min(430px, 88%);
+}
+.searchbar {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.3rem;
+  border-radius: 1.2rem;
+  background: rgba(6, 10, 26, 0.88);
+  border: 1.5px solid color-mix(in srgb, var(--sa1) 45%, transparent);
+  box-shadow: 0 0 56px -12px color-mix(in srgb, var(--sa1) 55%, transparent);
+  backdrop-filter: blur(10px);
+}
+.sb-icon {
+  color: var(--sa1);
+  flex-shrink: 0;
+}
+.sb-text {
+  flex: 1;
+  min-height: 1.5em;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: start;
+  font-family: inherit;
+}
+.sb-caret {
+  width: 2px;
+  height: 1.35em;
+  background: var(--sa1);
+  animation: caretBlink 1s steps(1) infinite;
+}
+@keyframes caretBlink {
+  50% {
+    opacity: 0;
+  }
+}
+.os-chips {
+  position: absolute;
+  bottom: 1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  width: min(560px, 94%);
+  z-index: 4;
+  min-height: 40px;
+}
+.os-chip {
+  padding: 0.42rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #fff;
+  background: color-mix(in srgb, var(--sc) 18%, rgba(255, 255, 255, 0.05));
+  border: 1px solid color-mix(in srgb, var(--sc) 50%, transparent);
+}
+.orbiter {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  animation: orbitSpin var(--od, 22s) linear infinite;
+}
+.orbiter.rev {
+  animation-direction: reverse;
+}
+@keyframes orbitSpin {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.orbit-stage:hover .orbiter {
+  animation-play-state: paused;
+}
+.orb-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 50px;
+  margin: -25px 0 0 -75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border-radius: 0.9rem;
+  background: rgba(13, 20, 48, 0.92);
+  border: 1px solid color-mix(in srgb, var(--oc) 55%, transparent);
+  color: #eaf2ff;
+  font-size: 0.76rem;
+  font-weight: 800;
+  box-shadow: 0 16px 36px -18px color-mix(in srgb, var(--oc) 60%, transparent);
+  transform: rotateY(var(--oa)) translateZ(var(--or));
+}
+.hl {
+  background: linear-gradient(
+    transparent 58%,
+    color-mix(in srgb, var(--sa1) 32%, transparent) 58%
+  );
+  padding-inline: 0.15em;
+  font-weight: 800;
+}
+
+/* ── نقشه پردیس (فضای کار اشتراکی) ── */
+.campus-box {
+  border-radius: 1.75rem;
+  background:
+    radial-gradient(
+      520px 320px at 50% 18%,
+      rgba(47, 107, 255, 0.13),
+      transparent
+    ),
+    linear-gradient(170deg, #0e1538, #0a0f2a);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow: hidden;
+}
+.campus-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.zone {
+  cursor: pointer;
+  outline: none;
+}
+.zone .z-shape {
+  transition: 0.35s;
+}
+.zone .z-top {
+  fill: rgba(255, 255, 255, 0.05);
+  stroke: rgba(199, 208, 245, 0.28);
+  stroke-width: 1.5;
+}
+.zone .z-side {
+  fill: color-mix(in srgb, var(--zc) 16%, rgba(10, 15, 42, 0.9));
+  stroke: color-mix(in srgb, var(--zc) 35%, transparent);
+  stroke-width: 1;
+}
+.zone:hover .z-top,
+.zone.on .z-top {
+  fill: color-mix(in srgb, var(--zc) 26%, rgba(255, 255, 255, 0.05));
+  stroke: var(--zc);
+  filter: drop-shadow(0 0 14px color-mix(in srgb, var(--zc) 70%, transparent));
+}
+.zone:hover .z-side,
+.zone.on .z-side {
+  fill: color-mix(in srgb, var(--zc) 40%, rgba(10, 15, 42, 0.9));
+  stroke: var(--zc);
+}
+.zone .z-label {
+  fill: #c7d0f5;
+  font-weight: 800;
+  transition: 0.3s;
+  pointer-events: none;
+}
+.zone:hover .z-label,
+.zone.on .z-label {
+  fill: #fff;
+}
+.zone:focus-visible .z-top {
+  stroke: #fff;
+  stroke-width: 2.5;
+}
+.campus-link {
+  stroke: rgba(199, 208, 245, 0.25);
+  stroke-width: 1.6;
+  stroke-dasharray: 5 8;
+  fill: none;
+  animation: dashMove 2.6s linear infinite;
+}
+.zone-info {
+  border-radius: 1.4rem;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1.5px solid rgba(12, 18, 51, 0.08);
+}
+.zone-info b {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--ink);
+}
+.zone-info p {
+  margin: 0.5rem 0 1rem;
+  font-size: 0.86rem;
+  line-height: 2;
+  color: rgba(12, 18, 51, 0.68);
+}
+
+/* ── قیف ایده ── */
+.funnel-svg {
+  width: min(380px, 80vw);
+  display: block;
+  margin-inline: auto;
+}
+.f-stage {
+  opacity: 0.35;
+  transition:
+    opacity 0.6s,
+    transform 0.6s;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.f-stage.on {
+  opacity: 1;
+  transform: scale(1.04);
+}
+.f-rocket {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: chipFloat 3.2s ease-in-out infinite;
+}
+.f-flame {
+  transform-box: fill-box;
+  transform-origin: top center;
+  animation: flameFlick 0.35s ease-in-out infinite alternate;
+}
+@keyframes flameFlick {
+  from {
+    transform: scaleY(0.75);
+  }
+  to {
+    transform: scaleY(1.15);
+  }
+}
+
+/* ── نقشه راه پژوهش ── */
+.roadmap {
+  position: relative;
+  max-width: 820px;
+  margin-inline: auto;
+}
+.rm-line {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  inset-inline-start: 27px;
+  width: 3px;
+  border-radius: 99px;
+  background: rgba(12, 18, 51, 0.09);
+  overflow: hidden;
+}
+.rm-line i {
+  display: block;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(180deg, var(--sa1), var(--sa2));
+  transition: height 0.2s linear;
+}
+.rm-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 1.3rem;
+  padding: 1.2rem 0;
+  position: relative;
+}
+.rm-node {
+  width: 56px;
+  height: 56px;
+  border-radius: 1.1rem;
+  background: #fff;
+  border: 2px solid rgba(12, 18, 51, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sa1);
+  z-index: 1;
+  transition: 0.45s;
+}
+.rm-node svg {
+  width: 24px;
+  height: 24px;
+}
+.rm-item.on .rm-node {
+  border-color: var(--sa1);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--sa1) 13%, transparent);
+  transform: scale(1.06);
+}
+.rm-card {
+  background: #fff;
+  border-radius: 1.3rem;
+  padding: 1.6rem 1.5rem;
+  border: 1.5px solid rgba(12, 18, 51, 0.08);
+  transition: 0.4s;
+}
+.rm-item.on .rm-card {
+  border-color: color-mix(in srgb, var(--sa1) 40%, transparent);
+  box-shadow: 0 24px 54px -30px color-mix(in srgb, var(--sa1) 45%, transparent);
+}
+.rm-card h3 {
+  margin: 0.15rem 0 0.55rem;
+  font-size: 1.08rem;
+  font-weight: 900;
+  color: var(--ink);
+}
+.rm-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 2.05;
+  color: rgba(12, 18, 51, 0.68);
+}
+
+/* ── ناوبری لنگری چسبان ── */
+.anchor-nav {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 30;
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.8rem 1rem;
+  background: rgba(7, 11, 31, 0.88);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  scrollbar-width: none;
+}
+.anchor-nav::-webkit-scrollbar {
+  display: none;
+}
+.an-link {
+  white-space: nowrap;
+  padding: 0.5rem 1.05rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--lav);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: 0.3s;
+}
+.an-link:hover,
+.an-link.on {
+  color: #fff;
+  background: color-mix(in srgb, var(--sa1) 25%, transparent);
+  border-color: color-mix(in srgb, var(--sa1) 55%, transparent);
+}
+
+/* ── نوار خدمات مرتبط (تزریقی) ── */
+.rel-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.rel-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.4rem;
+  border-radius: 1.3rem;
+  background: linear-gradient(
+    170deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  text-decoration: none;
+  transition: 0.35s;
+}
+.rel-card:hover {
+  border-color: color-mix(in srgb, var(--sa1) 55%, transparent);
+  transform: translateY(-5px);
+}
+.rel-ico {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(135deg, var(--sa1), var(--sa2));
+  box-shadow: 0 12px 26px -10px color-mix(in srgb, var(--sa1) 60%, transparent);
+}
+.rel-ico svg {
+  width: 20px;
+  height: 20px;
+}
+.rel-card b {
+  display: block;
+  color: #fff;
+  font-size: 0.95rem;
+}
+.rel-card span {
+  font-size: 0.78rem;
+  color: var(--lav);
+  line-height: 1.8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sc-beam,
+  .sc-arm,
+  .f-rocket,
+  .f-flame,
+  .orbiter,
+  .db-chip,
+  .campus-link {
+    animation: none !important;
+  }
+  [data-io].io-init {
+    opacity: 1;
+    transform: none;
+  }
+  .gauge .g-fill,
+  .gauge .g-needle,
+  .rb-track i {
+    transition: none;
+  }
+}

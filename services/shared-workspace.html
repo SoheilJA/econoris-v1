@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="../" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>فضای کار اشتراکی | اکونوریس</title>
+    <meta
+      name="description"
+      content="فضای کار اشتراکی اکونوریس؛ پردیس کاملی از خدمات زیرساختی برای تیم‌های پژوهشی داروسازی: میز پژوهشی، اتاق اختصاصی، آزمایشگاه، اینترنت پرسرعت، مشاوره حقوقی و منابع اطلاعاتی."
+    />
+    <link rel="canonical" href="../services/shared-workspace.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="اکونوریس" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:title" content="فضای کار اشتراکی | اکونوریس" />
+    <meta
+      property="og:description"
+      content="پردیس اکونوریس؛ همه زیرساخت پژوهش شما در یک نقطه."
+    />
+    <meta property="og:image" content="assets/img/og-cover.svg" />
+    <meta name="theme-color" content="#070B1F" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <link rel="stylesheet" href="assets/css/services.css" />
+    <style>
+      #econoris-preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        background: #070b1f;
+      }
+    </style>
+    <script>
+      try {
+        if (sessionStorage.getItem("econoris-visited") === "1") {
+          document.documentElement.classList.add("pt-cover");
+        }
+      } catch (e) {}
+    </script>
+    <noscript
+      ><style>
+        #econoris-preloader,
+        #econoris-transition {
+          display: none !important;
+        }
+      </style></noscript
+    >
+  </head>
+  <body
+    data-page="shared-workspace"
+    class="font-vazir bg-night text-white antialiased"
+  >
+    <div
+      id="econoris-preloader"
+      role="status"
+      aria-label="در حال بارگذاری سایت"
+    ></div>
+    <div id="econoris-header"></div>
+
+    <main id="main">
+      <!-- ═══ هیرو ═══ -->
+      <section
+        class="hero hero-sm svc-hero aurora grain"
+        aria-label="فضای کار اشتراکی"
+      >
+        <div class="hex-deco hd-1" aria-hidden="true"></div>
+        <div class="hex-deco hd-2" aria-hidden="true"></div>
+        <div
+          class="hcontainer relative z-10 flex flex-col items-center justify-center text-center"
+        >
+          <nav class="breadcrumb" aria-label="مسیر صفحه">
+            <a href="index.html">صفحه اصلی</a><span class="sep">/</span
+            ><span aria-current="page">فضای کار اشتراکی</span>
+          </nav>
+          <span class="eyebrow svc-eb" data-hero-in
+            ><span class="pulse-dot" aria-hidden="true"></span>دسته خدمات</span
+          >
+          <h1
+            class="mt-5 font-black leading-[1.3]"
+            style="font-size: clamp(1.9rem, 5vw, 3.2rem)"
+            data-hero-in
+          >
+            فضای کار اشتراکی
+          </h1>
+          <p
+            class="mt-5 max-w-2xl text-sm leading-8 text-lav sm:text-base"
+            data-hero-in
+          >
+            بستر تعامل، تبادل دانش و هم‌افزایی هدفمند میان تیم‌های استارتاپی
+            برای شتاب‌بخشی به رشد در فضایی تخصصی. روی نقشه پردیس زیر، هر نقطه را
+            لمس کنید.
+          </p>
+        </div>
+      </section>
+
+      <!-- ═══ نقشه پردیس ایزومتریک ═══ -->
+      <section class="sec-sec sec-night dots" aria-label="نقشه پردیس اکونوریس">
+        <div class="hcontainer">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="eyebrow svc-eb" data-reveal>پردیس اکونوریس</span>
+            <h2 class="h2 mt-4" data-reveal data-delay="80">
+              شش نقطه، یک پردیس
+            </h2>
+            <p class="sub mt-4" data-reveal data-delay="160">
+              روی هر منطقه بروید یا با کیبورد انتخابش کنید.
+            </p>
+          </div>
+
+          <div
+            class="mt-12 grid items-center gap-8 lg:grid-cols-[1.5fr_1fr]"
+            data-reveal
+          >
+            <div class="campus-box">
+              <svg
+                id="campus-svg"
+                class="campus-svg"
+                viewBox="0 0 760 500"
+                role="group"
+                aria-label="نقشه تعاملی پردیس اکونوریس"
+              >
+                <g class="campus-link">
+                  <path d="M190 210 C 260 160, 320 150, 380 175" />
+                  <path d="M570 210 C 500 160, 440 150, 380 175" />
+                  <path d="M190 425 C 260 380, 320 370, 380 395" />
+                  <path d="M570 425 C 500 380, 440 370, 380 395" />
+                  <path d="M380 220 V370" />
+                </g>
+                <!-- منطقه ۱: میز پژوهشی -->
+                <g
+                  class="zone"
+                  tabindex="0"
+                  role="link"
+                  style="--zc: #7c4dff"
+                  data-title="میز پژوهشی"
+                  data-desc="ایستگاه کاری اختصاصی برای مطالعه و پژوهش علمی، با دسترسی به منابع و ابزارهای جستجو."
+                  data-href="services/research-desk.html"
+                  aria-label="میز پژوهشی"
+                >
+                  <polygon
+                    class="z-shape z-top"
+                    points="190,150 275,192.5 190,235 105,192.5"
+                  />
+                  <polygon
+                    class="z-shape z-side"
+                    points="105,192.5 190,235 190,257 105,214.5"
+                  />
+                  <polygon
+                    class="z-shape z-side"
+                    points="275,192.5 190,235 190,257 275,214.5"
+                  />
+                  <circle cx="190" cy="192" r="6" fill="#7C4DFF" />
+                  <text
+                    class="z-label"
+                    x="190"
+                    y="285"
+                    text-anchor="middle"
+                    font-size="15"
+                  >
+                    میز پژوهشی
+                  </text>
+                </g>
+                <!-- منطقه ۲: اتاق اختصاصی -->
+                <g
+                  class="zone"
+                  tabindex="0"
+                  role="link"
+                  style="--zc: #ff4fa3"
+                  data-title="اتاق اختصاصی پژوهشی"
+                  data-desc="فضایی خصوصی برای تمرکز کامل تیم‌های پژوهشی؛ آزمایشگاه فکری + پشتوانه عملیاتی."
+                  data-href="services/private-research-room.html"
+                  aria-label="اتاق اختصاصی پژوهشی"
+                >
+                  <polygon
+                    class="z-shape z-top"
+                    points="380,115 465,157.5 380,200 295,157.5"
+                  />
+                  <polygon
+                    class="z-shape z-side"
+                    points="295,157.5 380,200 380,222 295,179.5"
+                  />
+                  <polygon
+                    class="z-shape z-side"
+                    points="465,157.5 380,200 380,222 465,179.5"
+                  />
+                  <rect
+                    x="371"
+                    y="150"
+                    width="18"
+                    height="14"
+                    rx="3"
+                    fill="#FF4FA3"
+                  />
+                  <text
+                    class="z-label"
+                    x="380"
+                    y="250"
+                    text-anchor="middle"
+                    font-size="15"
+                  >
+                    اتاق اختصاصی
+                  </text>
+                </g>
+                <!-- منطقه ۳: آزمایشگاه -->
+                <g
+                  class="zone"
+                  tabindex="0"
+                  role="link"
+                  style="--zc: #00d4c2"
+                  data-title="آزمایشگاه"
+                  data-desc="تجهیزات آنالیزی، فرمولاسیون و کنترل کیفی؛ با سه مدل دسترسی منعطف."
+                  data-href="services/laboratory.html"
+                  aria-label="آزمایشگاه"
+                >
+                  <polygon
+                    class="z-shape z-top"
+                    points="570,150 655,192.5 570,235 485,192.5"
+                  />
+                  <polygon
+                    class="z-shape z-side"
+                    points="485,192.5 570,235 570,257 485,214.5"
+                  />
+                  <polygon
+                    class="z-shape z-side"
+                    points="655,192.5 570,235 570,257 655,214.5"
+                  />
+                  <path
+                    d="M562 200h16M566 200v-8h8v8"
+                    stroke="#00D4C2"
+                    stroke-width="2.5"
+                    fill="none"
+                    stroke-linecap="round"
+                  />
+                  <text
+                    class="z-label"
+                    x="570"
+                    y="285"
+                    text-anchor="middle"
+                    font-size="15"
+                  >
+                    آزمایشگاه
+                  </text>
+                </g>
+                <!-- منطقه ۴: اینترنت پرسرعت -->
+                <g
+                  class="zone"
+                  tabindex="0"
+                  role="link"
+                  style="--zc: #22d3ee"
+                  data-title="اینترنت پرسرعت"
+                  data-desc="اتصال سریع و پایدار برای کار با پایگاه‌های سنگین و ابزارهای ابری."
+                  data-href="services/high-speed-internet.html"
+                  aria-label="اینترنت پرسرعت"
+                >
+                  <polygon
+                    class="z-shape z-top"
+                    points="190,365 275,407.5 190,450 105,407.5"
+                  />
+                  <polygon
+                    class="z-shape z-side"
+                    points="105,407.5 190,450 190,472 105,429.5"
+                  />
+                  <polygon
+                    class="z-shape z-side"
+                    points="275,407.5 190,450 190,472 275,429.5"
+                  />
+                  <path
+                    d="M178 402a17 17 0 0 1 24 0M182 407a11 11 0 0 1 16 0"
+                    stroke="#22D3EE"
+                    stroke-width="2.5"
+                    fill="none"
+                    stroke-linecap="round"
+                  />
+                  <circle cx="190" cy="413" r="2.6" fill="#22D3EE" />
+                  <text
+                    class="z-label"
+                    x="190"
+                    y="425"
+                    text-anchor="middle"
+                    font-size="15"
+                    dy="58"
+                  >
+                    اینترنت پرسرعت
+                  </text>
+                </g>
+                <!-- منطقه ۵: مشاوره حقوقی -->
+                <g
+                  class="zone"
+                  tabindex="0"
+                  role="link"
+                  style="--zc: #ffb938"
+                  data-title="مشاوره حقوقی"
+                  data-desc="از استراتژی مالکیت فکری و پتنت تا قراردادهای سرمایه‌گذاری و حقوق کار."
+                  data-href="services/legal-consulting.html"
+                  aria-label="مشاوره حقوقی"
+                >
+                  <polygon
+                    class="z-shape z-top"
+                    points="380,330 465,372.5 380,415 295,372.5"
+                  />
+                  <polygon
+                    class="z-shape z-side"
+                    points="295,372.5 380,415 380,437 295,394.5"
+                  />
+                  <polygon
+                    class="z-shape z-side"
+                    points="465,372.5 380,415 380,437 465,394.5"
+                  />
+                  <path
+                    d="M380 352v34M372 386h16M368 356l12-8 12 8"
+                    stroke="#FFB938"
+                    stroke-width="2.5"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <text
+                    class="z-label"
+                    x="380"
+                    y="465"
+                    text-anchor="middle"
+                    font-size="15"
+                  >
+                    مشاوره حقوقی
+                  </text>
+                </g>
+                <!-- منطقه ۶: منابع اطلاعاتی -->
+                <g
+                  class="zone"
+                  tabindex="0"
+                  role="link"
+                  style="--zc: #10b981"
+                  data-title="دسترسی به منابع اطلاعاتی"
+                  data-desc="پایگاه‌های بین‌المللی، ژورنال‌های تخصصی، ابزارهای AI و آموزش آنلاین."
+                  data-href="services/information-resources.html"
+                  aria-label="دسترسی به منابع اطلاعاتی"
+                >
+                  <polygon
+                    class="z-shape z-top"
+                    points="570,365 655,407.5 570,450 485,407.5"
+                  />
+                  <polygon
+                    class="z-shape z-side"
+                    points="485,407.5 570,450 570,472 485,429.5"
+                  />
+                  <polygon
+                    class="z-shape z-side"
+                    points="655,407.5 570,450 570,472 655,429.5"
+                  />
+                  <path
+                    d="M563 396h14v26h-14zM560 396h20M570 392v4"
+                    stroke="#10B981"
+                    stroke-width="2.5"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <text
+                    class="z-label"
+                    x="570"
+                    y="425"
+                    text-anchor="middle"
+                    font-size="14"
+                    dy="58"
+                  >
+                    منابع اطلاعاتی
+                  </text>
+                </g>
+              </svg>
+            </div>
+            <div id="zone-info" class="zone-info" aria-live="polite">
+              <b>میز پژوهشی</b>
+              <p>
+                ایستگاه کاری اختصاصی برای مطالعه و پژوهش علمی، با دسترسی به
+                منابع و ابزارهای جستجو.
+              </p>
+              <a href="services/research-desk.html" class="btn btn-dark btn-sm"
+                >مشاهده صفحه خدمت</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ معرفی شش خدمت ═══ -->
+      <section
+        class="sec-sec sec-light dots-light"
+        aria-label="خدمات فضای کار اشتراکی"
+      >
+        <div class="hcontainer">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="eyebrow eyebrow-dark svc-eb-d" data-reveal
+              >همه خدمات</span
+            >
+            <h2 class="h2 h2-dark mt-4" data-reveal data-delay="80">
+              زیرساخت کامل، در یک نقطه
+            </h2>
+          </div>
+          <div class="tile-grid mt-12" data-reveal-group>
+            <a
+              href="services/research-desk.html"
+              class="tile tile-l"
+              style="text-decoration: none"
+              ><h3 style="color: var(--ink)">میز پژوهشی</h3>
+              <p>ایستگاه کاری اختصاصی برای مطالعه و پژوهش علمی.</p></a
+            >
+            <a
+              href="services/private-research-room.html"
+              class="tile tile-l"
+              style="text-decoration: none"
+              ><h3 style="color: var(--ink)">اتاق اختصاصی پژوهشی</h3>
+              <p>فضایی خصوصی برای تمرکز کامل تیم‌های پژوهشی.</p></a
+            >
+            <a
+              href="services/laboratory.html"
+              class="tile tile-l"
+              style="text-decoration: none"
+              ><h3 style="color: var(--ink)">آزمایشگاه</h3>
+              <p>تجهیزات تخصصی برای طرح‌های دارویی و زیست‌فناوری.</p></a
+            >
+            <a
+              href="services/high-speed-internet.html"
+              class="tile tile-l"
+              style="text-decoration: none"
+              ><h3 style="color: var(--ink)">اینترنت پرسرعت</h3>
+              <p>دسترسی سریع و پایدار به منابع علمی جهان.</p></a
+            >
+            <a
+              href="services/legal-consulting.html"
+              class="tile tile-l"
+              style="text-decoration: none"
+              ><h3 style="color: var(--ink)">مشاوره حقوقی</h3>
+              <p>از پتنت و مالکیت فکری تا قراردادهای همکاری.</p></a
+            >
+            <a
+              href="services/information-resources.html"
+              class="tile tile-l"
+              style="text-decoration: none"
+              ><h3 style="color: var(--ink)">دسترسی به منابع اطلاعاتی</h3>
+              <p>پایگاه‌ها و ژورنال‌های معتبر علمی.</p></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="econoris-footer"></div>
+    <div id="econoris-drawer"></div>
+    <div id="econoris-search"></div>
+    <div id="econoris-transition" aria-hidden="true"></div>
+    <div id="econoris-mobilebar"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/content.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/page-services.js"></script>
+  </body>
+</html>
