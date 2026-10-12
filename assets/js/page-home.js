@@ -308,13 +308,22 @@
         const prev = $('#ts-prev'), next = $('#ts-next');
         if (prev) prev.addEventListener('click', () => go(idx - 1));
         if (next) next.addEventListener('click', () => go(idx + 1));
-        /* پخش خودکار (با توقف روی هاور/فوکوس/تب مخفی) */
+        /* پخش خودکار (با توقف روی هاور/فوکوس/تب مخفی/خروج از دید) */
         let elapsed = 0, last = performance.now(), paused = false;
+        let visible = true;
+        /* وقتی اسلایدر از دید کاربر خارج شد، پخش خودکار متوقف می‌شود تا
+           صفحه خودبه‌خود اسکرول نشود و به بخش نظرات برنگردد */
+        if ('IntersectionObserver' in window) {
+            new IntersectionObserver((entries) => {
+                visible = entries[0].isIntersecting;
+                if (!visible) elapsed = 0;
+            }, { threshold: 0.2 }).observe(vp);
+        }
         const DUR = 6000;
         if (!reduced) {
             (function loop(now) {
                 requestAnimationFrame(loop);
-                if (!paused && !document.hidden) elapsed += now - last;
+                if (!paused && !document.hidden && visible) elapsed += now - last;
                 last = now;
                 if (bar) bar.style.width = (Math.min(1, elapsed / DUR) * 100) + '%';
                 if (elapsed >= DUR) { elapsed = 0; go(idx + 1); }
