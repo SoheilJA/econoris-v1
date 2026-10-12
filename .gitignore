@@ -1,0 +1,21 @@
+# وابستگی‌ها
+node_modules/
+
+# فایل‌های موقت و پروب
+tmp-probe.css
+*.log
+npm-debug.log*
+
+# فایل پیشرفت ایجنت (فقط محلی، در گیت ثبت نمی‌شود)
+agent-progress.md
+
+# فایل‌های سیستمی‌عامل
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# تنظیمات ویرایشگر
+.vscode/
+.idea/
+*.swp
+*.swo
